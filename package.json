@@ -1,0 +1,27 @@
+{
+  "name": "text-editor-jate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src-sw.js",
+  "scripts": {
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server && nodemon server.js --ignore client",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install",
+    "client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaycooo/Text-Editor-JATE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaycooo/Text-Editor-JATE/issues"
+  },
+  "homepage": "https://github.com/jaycooo/Text-Editor-JATE#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
